@@ -1,0 +1,24 @@
+stages:
+  - build
+  - deploy
+
+
+build_docker_image:
+    stage: build
+    script:
+        - docker build -t 10.13.2.172:9443/mia_grp .
+    tags:
+        - stage
+    only:
+        - master
+
+deploy_stage:
+    stage: deploy
+    script:
+        - docker stop mia_grp || true && docker rm mia_grp || true
+        - docker container run --name mia_grp --mount source=esd_files,target=/tmp/esd -p 8023:8023 -p 8033:8033 -p 8057:8057 -p 8024:8024 -p 8026:8026 -itd 10.13.2.172:9443/mia_grp bash -c "sh ./var/mia_grps_dev/startup.sh & sleep 5 && tail -F /dev/null"
+        - docker image prune -a -f
+    tags:
+        - stage
+    only:
+        - master

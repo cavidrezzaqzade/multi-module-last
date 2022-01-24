@@ -1,0 +1,15 @@
+/mia-grps-bpm-api/target/
+/mia-grps-commons/target/
+/mia-grps-test-api/target/
+/node_modules
+/mia-grps-auth-server
+/.idea
+*.log
+
+/mia-grps-wopi-host-api/target/
+/mia-grps-wopi-host-service/target/
+
+/mia-grps-wopi-host-api/.idea/
+/mia-grps-wopi-host-service/.idea/
+
+*.iml
