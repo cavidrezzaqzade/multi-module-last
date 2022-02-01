@@ -1,6 +1,6 @@
 package az.gov.mia.grps.service.impl;
 
-import az.gov.mia.grp.test.api.TestApiDelegate;
+import az.gov.mia.grp.api.TestApiDelegate;
 import az.gov.mia.grp.test.model.EchoDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

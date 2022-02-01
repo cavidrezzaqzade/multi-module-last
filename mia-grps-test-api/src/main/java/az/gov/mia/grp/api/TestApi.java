@@ -1,4 +1,4 @@
-package az.gov.mia.grp.test.api;
+package az.gov.mia.grp.api;
 
 import az.gov.mia.grp.test.model.EchoDto;
 import io.swagger.v3.oas.annotations.Operation;
@@ -29,7 +29,7 @@ public interface TestApi {
         return getDelegate().echo();
     }
     
-    @GetMapping("test/echo/all")
+    @GetMapping("/test/echo/all")
     default ResponseEntity<Page<EchoDto>> getAllEchos(Pageable page){
         return getDelegate().getAllEchos(page);
     }

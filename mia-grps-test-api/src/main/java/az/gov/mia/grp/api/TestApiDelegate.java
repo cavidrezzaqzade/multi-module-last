@@ -1,4 +1,4 @@
-package az.gov.mia.grp.test.api;
+package az.gov.mia.grp.api;
 
 import az.gov.mia.grp.test.model.EchoDto;
 import org.springframework.data.domain.Page;
