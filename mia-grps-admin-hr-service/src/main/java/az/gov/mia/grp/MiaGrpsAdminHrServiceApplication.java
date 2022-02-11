@@ -2,15 +2,13 @@ package az.gov.mia.grp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 
 import javax.annotation.PostConstruct;
 import java.util.TimeZone;
 
 @SpringBootApplication
-//@EnableResourceServer
+@EnableResourceServer
 public class MiaGrpsAdminHrServiceApplication {
 
 	public static void main(String[] args) {
