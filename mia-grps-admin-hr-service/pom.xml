@@ -13,41 +13,29 @@
     <version>0.0.1</version>
     <name>mia-grps-admin-hr-service</name>
     <description>Admin HR Service</description>
-
     <properties>
         <java.version>1.8</java.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
-    <!--<repositories>-->
-        <!--<repository>-->
-            <!--<id>jcenter-snapshots</id>-->
-            <!--<name>jcenter</name>-->
-            <!--<url>http://oss.jfrog.org/artifactory/oss-snapshot-local/</url>-->
-        <!--</repository>-->
-    <!--</repositories>-->
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-jdbc</artifactId>-->
-<!--        </dependency>-->
-
-        <dependency>
+     <!--   <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <dependency>
+    <!--    <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
@@ -57,55 +45,22 @@
                     <artifactId>junit-vintage-engine</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
-        <!--<dependency>-->
-            <!--<groupId>io.springfox</groupId>-->
-            <!--<artifactId>springfox-boot-starter</artifactId>-->
-            <!--<version>3.0.0-SNAPSHOT</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>io.springfox</groupId>-->
-            <!--<artifactId>springfox-data-rest</artifactId>-->
-            <!--<version>3.0.0-SNAPSHOT</version>-->
-        <!--</dependency>-->
-
+        </dependency>-->
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
         </dependency>
 
-
-
-        <dependency>
+ <!--       <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.20</version>
-        </dependency>
-        <dependency>
+        </dependency>-->
+  <!--      <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
-        </dependency>
-        <!--<dependency>-->
-            <!--<groupId>io.springfox</groupId>-->
-            <!--<artifactId>springfox-bean-validators</artifactId>-->
-            <!--<version>3.0.0-SNAPSHOT</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>io.springfox</groupId>-->
-            <!--<artifactId>springfox-swagger-ui</artifactId>-->
-            <!--<version>2.10.5</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.apache.commons</groupId>-->
-            <!--<artifactId>commons-lang3</artifactId>-->
-            <!--<type>jar</type>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>${project.groupId}</groupId>-->
-            <!--<artifactId>mia-grps-commons</artifactId>-->
-            <!--<version>${project.version}</version>-->
-        <!--</dependency>-->
+        </dependency>-->
 
         <dependency>
             <groupId>az.gov.mia.grps</groupId>
@@ -113,223 +68,19 @@
             <version>0.0.1</version>
         </dependency>
 
-        <dependency>
+ <!--       <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
-        </dependency>
-
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.security</groupId>-->
-<!--            <artifactId>spring-security-oauth2-core</artifactId>-->
-<!--            <version>5.1.2.RELEASE</version>-->
-<!--        </dependency>-->
-
-
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.security.oauth</groupId>-->
-<!--            <artifactId>spring-security-oauth2</artifactId>-->
-<!--            <version>${oauth.version}</version>-->
-<!--        </dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>com.fasterxml.jackson.datatype</groupId>-->
-            <!--<artifactId>jackson-datatype-jsr310</artifactId>-->
-            <!--<version>2.11.1</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework</groupId>-->
-            <!--<artifactId>spring-test</artifactId>-->
-            <!--<version>5.3.0-SNAPSHOT</version>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-test</artifactId>-->
-            <!--<version>2.4.0-SNAPSHOT</version>-->
-            <!--<scope>test</scope>-->
-        <!--</dependency>-->
-        <!--<dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.modelmapper</groupId>
-            <artifactId>modelmapper</artifactId>
-            <version>2.3.5</version>
-            <scope>compile</scope>
-        </dependency>-->
-        <!--  start of auth dependency      -->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.boot</groupId>-->
-<!--            <artifactId>spring-boot-starter-security</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework.cloud</groupId>-->
-<!--            <artifactId>spring-cloud-starter-oauth2</artifactId>-->
-<!--        </dependency>-->
-     <!--   <dependency>
-            <groupId>org.springframework.security.oauth.boot</groupId>
-            <artifactId>spring-security-oauth2-autoconfigure</artifactId>
-            <version>2.1.6.RELEASE</version>
         </dependency>-->
 
-        <!--      end of auth dependency  -->
-
-       <!-- <dependency>
-            <groupId>org.camunda.bpm.model</groupId>
-            <artifactId>camunda-dmn-model</artifactId>
-            <version>7.14.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-        </dependency>-->
-        <!--<dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.5.12</version>
-        </dependency>-->
-        <!--        <dependency>-->
-<!--            <groupId>org.springframework.security</groupId>-->
-<!--            <artifactId>spring-security-core</artifactId>-->
-<!--        </dependency>-->
     </dependencies>
-    <!--<profiles>-->
-        <!--<profile>-->
-            <!--<id>spec</id>-->
-            <!--<activation>-->
-                <!--<activeByDefault>true</activeByDefault>-->
-            <!--</activation>-->
-            <!--<dependencies>-->
-                <!--&lt;!&ndash; <dependency>-->
-                    <!--<groupId>org.springdoc</groupId>-->
-                    <!--<artifactId>springdoc-openapi-webmvc-core</artifactId>-->
-                    <!--<version>1.2.19</version>-->
-                <!--</dependency> &ndash;&gt;-->
-                <!--<dependency>-->
-                    <!--<groupId>org.springdoc</groupId>-->
-                    <!--<artifactId>springdoc-openapi-ui</artifactId>-->
-                    <!--<version>1.2.32</version>-->
-                <!--</dependency>-->
 
-
-                <!--<dependency>-->
-                    <!--<groupId>org.springframework.boot</groupId>-->
-                    <!--<artifactId>spring-boot-starter-data-rest</artifactId>-->
-                    <!--<scope>provided</scope>-->
-                <!--</dependency>-->
-                <!--<dependency>-->
-                    <!--<groupId>org.springframework.boot</groupId>-->
-                    <!--<artifactId>spring-boot-starter-web</artifactId>-->
-                    <!--<scope>provided</scope>-->
-                <!--</dependency>-->
-
-                <!--&lt;!&ndash; <dependency>-->
-                    <!--<groupId>io.springfox</groupId>-->
-                    <!--<artifactId>springfox-swagger-ui</artifactId>-->
-                    <!--<version>2.9.2</version>-->
-                <!--</dependency>              &ndash;&gt;-->
-                <!--&lt;!&ndash; <dependency>-->
-                    <!--<groupId>io.springfox</groupId>-->
-                    <!--<artifactId>springfox-swagger2</artifactId>-->
-                    <!--<version>2.9.2</version>-->
-                <!--</dependency> &ndash;&gt;-->
-            <!--</dependencies>-->
-            <!--<build>-->
-                <!--<plugins>-->
-                    <!--<plugin>-->
-                        <!--<groupId>org.apache.maven.plugins</groupId>-->
-                        <!--<artifactId>maven-jar-plugin</artifactId>-->
-                        <!--<version>3.2.0</version>-->
-                        <!--<configuration>-->
-                            <!--<excludes>-->
-                                <!--<exclude>az/gov/mia/grp/exclude/**</exclude>-->
-                            <!--</excludes>-->
-                        <!--</configuration>-->
-                    <!--</plugin>-->
-                <!--</plugins>-->
-            <!--</build>-->
-        <!--</profile>-->
-
-        <!--<profile>-->
-            <!--<id>spec test</id>-->
-            <!--<activation>-->
-                <!--<activeByDefault>false</activeByDefault>-->
-            <!--</activation>-->
-            <!--<properties>-->
-                <!--<start.class>az.gov.mia.grps.exclude.Application</start.class>-->
-            <!--</properties>-->
-            <!--<dependencies>-->
-                <!--<dependency>-->
-                    <!--<groupId>org.springdoc</groupId>-->
-                    <!--<artifactId>springdoc-openapi-ui</artifactId>-->
-                    <!--<version>1.2.32</version>-->
-                <!--</dependency>-->
-
-
-                <!--<dependency>-->
-                    <!--<groupId>org.springframework.boot</groupId>-->
-                    <!--<artifactId>spring-boot-starter-data-rest</artifactId>-->
-                <!--</dependency>-->
-                <!--<dependency>-->
-                    <!--<groupId>org.springframework.boot</groupId>-->
-                    <!--<artifactId>spring-boot-starter-web</artifactId>-->
-                <!--</dependency>-->
-                <!--<dependency>-->
-                    <!--<groupId>org.springframework.boot</groupId>-->
-                    <!--<artifactId>spring-boot-devtools</artifactId>-->
-                <!--</dependency>-->
-                <!--<dependency>-->
-                    <!--<groupId>org.springframework.boot</groupId>-->
-                    <!--<artifactId>spring-boot-starter-test</artifactId>-->
-                    <!--<scope>test</scope>-->
-                    <!--<exclusions>-->
-                        <!--<exclusion>-->
-                            <!--<groupId>org.junit.vintage</groupId>-->
-                            <!--<artifactId>junit-vintage-engine</artifactId>-->
-                        <!--</exclusion>-->
-                    <!--</exclusions>-->
-                <!--</dependency>-->
-
-            <!--</dependencies>-->
-            <!--<build>-->
-
-                <!--<plugins>-->
-                    <!--<plugin>-->
-                        <!--<groupId>org.springframework.boot</groupId>-->
-                        <!--<artifactId>spring-boot-maven-plugin</artifactId>-->
-                        <!--<configuration>-->
-                            <!--<mainClass>${start.class}</mainClass>-->
-                        <!--</configuration>-->
-                        <!--<executions>-->
-                            <!--<execution>-->
-                                <!--<goals>-->
-                                    <!--<goal>repackage</goal>-->
-                                <!--</goals>-->
-                            <!--</execution>-->
-                        <!--</executions>-->
-                    <!--</plugin>-->
-
-                <!--</plugins>-->
-            <!--</build>-->
-
-        <!--</profile>-->
-    <!--</profiles>-->
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-
         </plugins>
     </build>
 </project>
