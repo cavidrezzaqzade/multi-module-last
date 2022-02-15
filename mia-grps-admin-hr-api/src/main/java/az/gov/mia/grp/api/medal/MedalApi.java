@@ -1,7 +1,6 @@
 package az.gov.mia.grp.api.medal;
 
 import az.gov.mia.grp.model.MedalDTO;
-import az.gov.mia.grp.util.TrimUtil;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.ResponseEntity;
@@ -45,7 +44,6 @@ public interface MedalApi {
             tags = {"MedalApi"})
     @PostMapping(value = "", consumes = {"application/json"})
     default ResponseEntity<?> add(@Valid @RequestBody MedalDTO dto) {
-        new TrimUtil<>().trim(dto);
         return getDelegate().add(dto);
     }
 
@@ -57,7 +55,6 @@ public interface MedalApi {
     default ResponseEntity<?> update(
             @PathVariable(value = "id") Long id,
             @Valid @RequestBody MedalDTO dto) {
-        new TrimUtil<>().trim(dto);
         return getDelegate().update(id, dto);
     }
 

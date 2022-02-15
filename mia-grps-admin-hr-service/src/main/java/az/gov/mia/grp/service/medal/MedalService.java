@@ -2,14 +2,9 @@ package az.gov.mia.grp.service.medal;
 
 import az.gov.mia.grp.api.medal.MedalApiDelegate;
 import az.gov.mia.grp.entity.medal.MedalEntity;
-import az.gov.mia.grp.exception.ItemNotFoundException;
-import az.gov.mia.grp.exception.ItemNotFoundMapValidationException;
 import az.gov.mia.grp.model.MedalDTO;
 import az.gov.mia.grp.repository.medal.MedalRepository;
-import az.gov.mia.grp.response.MessageResponse;
-import az.gov.mia.grp.response.Reason;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -19,7 +14,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-@PreAuthorize("hasAuthority('HR_CRUD')")
+//@PreAuthorize("hasAuthority('HR_CRUD')")
 public class MedalService implements MedalApiDelegate {
 
     private final MedalRepository repository;
@@ -43,7 +38,7 @@ public class MedalService implements MedalApiDelegate {
         return entity;
     }
 
-    @PreAuthorize("hasAnyAuthority('HR_CRUD','USER_CRUD')")
+//    @PreAuthorize("hasAnyAuthority('HR_CRUD','USER_CRUD')")
     @Override
     public ResponseEntity<List<MedalDTO>> getAll(){
         List<MedalDTO> DTOList = repository.getAllByIdNotNullOrderById().stream()
@@ -53,8 +48,8 @@ public class MedalService implements MedalApiDelegate {
 
     @Override
     public ResponseEntity<MedalDTO> show(long id) {
-        MedalEntity entity = repository.findById(id)
-                .orElseThrow(() -> new ItemNotFoundException(Reason.NOT_FOUND.getValue()));
+        MedalEntity entity = repository.findById(id).get();
+//                .orElseThrow(() -> new ItemNotFoundException(Reason.NOT_FOUND.getValue()));
 
         return ResponseEntity.ok(dtoMapper(entity));
     }
@@ -71,11 +66,12 @@ public class MedalService implements MedalApiDelegate {
             map.put("name","Medal adı mövcuddur");
         }
 
-        if(!map.isEmpty()) throw new ItemNotFoundMapValidationException(map);
+//        if(!map.isEmpty()) throw new ItemNotFoundMapValidationException(map);
 
         MedalEntity createdData = repository.save(entity);
 
-        return MessageResponse.successResponse(Reason.SUCCESS_ADD.getValue(), dtoMapper(createdData));
+        return null;
+//        return MessageResponse.successResponse(Reason.SUCCESS_ADD.getValue(), dtoMapper(createdData));
     }
 
     @Override
@@ -93,13 +89,15 @@ public class MedalService implements MedalApiDelegate {
                 map.put("name","Medal adı mövcuddur");
             }
 
-            if(!map.isEmpty()) throw new ItemNotFoundMapValidationException(map);
+//            if(!map.isEmpty()) throw new ItemNotFoundMapValidationException(map);
 
             MedalEntity updatedEntity = repository.save(entityMapper(dto, entity.get()));
 
-            return MessageResponse.successResponse(Reason.SUCCESS_UPDATE.getValue(), dtoMapper(updatedEntity));
+            return null;
+//            return MessageResponse.successResponse(Reason.SUCCESS_UPDATE.getValue(), dtoMapper(updatedEntity));
         } else {
-            throw new ItemNotFoundException(Reason.NOT_FOUND.getValue());
+            return null;
+//            throw new ItemNotFoundException(Reason.NOT_FOUND.getValue());
         }
     }
 
@@ -107,6 +105,7 @@ public class MedalService implements MedalApiDelegate {
     public ResponseEntity<?> delete(long id) {
         repository.deleteById(id);
 
-        return MessageResponse.successDelete(Reason.SUCCESS_DELETE.getValue());
+        return null;
+//        return MessageResponse.successDelete(Reason.SUCCESS_DELETE.getValue());
     }
 }

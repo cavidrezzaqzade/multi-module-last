@@ -1,1 +1,0 @@
-CREATE UNIQUE INDEX org_name_upper_idx ON humres_kadr.hr_organization_names(UPPER(name));

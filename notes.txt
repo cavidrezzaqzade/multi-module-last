@@ -1,2 +1,0 @@
-
-Bpm servisdə test istifadəçilər (admin, user) şifrəsi bcrypt encode olunmuş 'a'
